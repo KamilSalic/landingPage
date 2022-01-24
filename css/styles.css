@@ -1,0 +1,244 @@
+/*                  start of CSS Reset             */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*                  end of CSS Reset             */
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-container {
+  background: radial-gradient(#38122c 20%, #2b0e4b 60%, #16042b 80%);
+  width: 100%;
+  display: flex;
+}
+.svg-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  opacity: 0.1;
+  animation: ani 3s ease-in-out infinite;
+  position: relative;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  stroke-width: 3px;
+}
+.second-curved-animated-line {
+  padding-left: 9rem;
+  position: absolute;
+  margin: 0;
+}
+.third-curved-animated-line {
+  padding-left: 26rem;
+  position: absolute;
+}
+.fourth-curved-animated-line {
+  padding-left: 46rem;
+  position: absolute;
+}
+.fifth-curved-animated-line {
+  padding-left: 57.3rem;
+  position: absolute;
+}
+@keyframes ani {
+  10% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.main-content {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.nav-bar {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  height: max-content;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+}
+.nav-items li {
+  font-size: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  max-width: 6rem;
+  max-height: 6rem;
+  border-radius: 50%;
+}
+.middle-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+}
+.title-container h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+.title-container p {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.center-img {
+  width: 30rem;
+  height: 30rem;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+}
+.center-img img {
+  border-radius: 20px;
+}
+/* .box {
+  width: 500px;
+  height: 100px;
+  border: solid 5px rgb(12, 12, 12);
+  border-color: rgb(15, 15, 15) transparent transparent transparent;
+  border-radius: 50%/100px 100px 0 0;
+} */

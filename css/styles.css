@@ -387,27 +387,32 @@ svg {
   justify-content: flex-start;
   position: relative;
 }
+.main-middle-img-container {
+  display: flex;
+  position: relative;
+}
+.main-middle-img {
+  border-radius: 50% 50% 0 0;
+  padding: 0 6rem;
+}
 .side-middle-img {
   position: absolute;
-  bottom: -2rem;
-  left: 1rem;
+  bottom: -5rem;
+  left: 1.5rem;
   width: 5rem;
   transition: all 1s ease-in;
 }
-.side-middle-img:hover {
+.side-middle-img-rotation {
   transition: all 1s ease-in;
   transform: rotate3d(1, 0, 1, 1turn);
 }
 .play-beyond-img {
   max-width: 10rem;
 }
-.main-middle-img {
-  border-radius: 50% 50% 0 0;
-  padding: 0 6rem;
-}
+
 /*                   <METAVERSE-PRODUCTS-CONTAINER>                   */
 .metaverse-products-container {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 .metaverse-products {
   display: flex;
@@ -441,22 +446,20 @@ svg {
   padding-right: 0;
   margin-right: 0;
 }
+
 .metaverse-single-product {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-direction: column;
-}
-.metaverse-single-product {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 1rem;
   flex-direction: row;
+  width: 33.333%;
+}
+.metaverse-single-product-inner {
+  display: flex;
 }
 .oculus-img {
-  max-height: 8rem;
-  max-width: 10rem;
+  height: 8rem;
+  width: 10rem;
   padding: 1rem;
   transform: rotate3d(0, 0, 0, 0);
   transition: all 1s ease-in-out;
@@ -466,6 +469,9 @@ svg {
   transition: all 1s ease-in-out;
 }
 .oculus-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 1rem;
   border-radius: 1rem;
 }
@@ -501,6 +507,7 @@ svg {
 .metaverse-single-product h2 {
   text-align: center;
   font-size: 1.2rem;
+  width: fit-content;
 }
 .shop-now {
   font-size: 0.8rem;
@@ -508,6 +515,7 @@ svg {
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
   text-align: center;
+  width: fit-content;
 }
 .shop-now:hover {
   opacity: 1;
@@ -527,33 +535,103 @@ svg {
 /*                   </ METAVERSE-PRODUCTS-CONTAINER>                   */
 
 /*                           MEDIA QUERIES                     */
+@media (max-width: 1150px) {
+  .title-container h1 {
+    font-size: 4.5rem;
+  }
+  .metaverse-single-product {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+  }
+  .metaverse-single-product-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .oculus-background {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 1024px) {
   .main-middle-img {
-    padding: 0 2rem;
+    padding: 0;
+  }
+  .center-img {
+    justify-content: flex-end;
+  }
+  .side-middle-img {
+    bottom: -5rem;
+    left: -4.5rem;
   }
   .curved-text {
-    max-width: 10rem;
+    max-width: 12rem;
     margin-top: -13rem;
+  }
+  .title-container {
+    padding-right: 1rem;
   }
   .metaman {
     max-height: 14rem;
-    max-width: 10rem;
+    max-width: 12rem;
   }
   .oculus-img {
-    max-width: 7rem;
-    max-height: 9rem;
+    width: 8rem;
+    height: 6rem;
+  }
+  .metaverse-single-product-texts {
+    width: 8rem;
   }
 }
-@media (max-width: 840px) {
+@media (max-width: 855px) {
+  .main-container {
+    padding-bottom: 8rem;
+  }
   .title-container h1 {
     font-size: 4rem;
   }
-  .oculus-img {
-    max-width: 5rem;
-    max-height: 7rem;
+  .metaverse-single-product {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  /* footer to fixxxxx */
+  .footer {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-inner li {
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-phone-number {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .phone-nr {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  .copyrights {
+    margin-top: 1rem;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 779px) {
+  .main-container {
+    padding-bottom: 43rem;
+  }
   .nav-items-anchors {
     display: none;
   }
@@ -566,20 +644,18 @@ svg {
   .center-img {
     height: 25rem;
   }
-  .side-middle-img {
-    bottom: 0rem;
-    left: -1.5rem;
-    margin-left: 1.5rem;
+  .main-middle-img {
+    padding-right: 0;
   }
   .play-beyond-img {
-    max-width: 8rem;
+    max-width: 9rem;
   }
   .metaman {
-    max-width: 8rem;
+    max-width: 9rem;
     max-height: 12rem;
   }
   .curved-text {
-    max-width: 8rem;
+    max-width: 9rem;
   }
   .metaverse-single-product h2 {
     font-size: 0.9rem;
@@ -694,6 +770,7 @@ svg {
     width: 50%;
     height: 100%;
     margin: 0;
+    margin-left: -1rem;
     padding: 0;
     top: 0;
     background: radial-gradient(
@@ -703,33 +780,55 @@ svg {
     );
     background-repeat: no-repeat;
   }
-  /*                       </HIDDEN MENU>                  */
-}
-@media (max-width: 680px) {
-  .center-img {
-    height: 22rem;
+  /* pasted to check from media 650 comment to delete */
+  .metaverse-products-container {
+    margin-top: 10rem;
   }
-  .main-middle-img {
-    width: 22rem;
+  .metaverse-products {
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+  }
+  .metaverse-product-main {
+    width: 100%;
+    align-items: center;
   }
   .curved-text {
-    margin-top: -11rem;
-    max-width: 6rem;
-    transform: scale(1.2);
+    max-width: 100%;
+    margin-top: -15rem;
+  }
+  .curved-text:hover {
+    transform: translateY(1rem);
   }
   .metaman {
-    max-width: 6rem;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .metaverse-single-products-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .metaverse-single-products-container .metaverse-single-product:nth-child(1) {
+    align-items: flex-start;
+  }
+  .metaverse-single-products-container .metaverse-single-product:nth-child(2) {
+    align-items: center;
+  }
+  .metaverse-single-product {
+    margin: 0;
+    margin-right: 4rem;
+    width: 100%;
   }
   .oculus-background {
-    margin-right: 0.4rem;
+    width: 100%;
   }
+  /*                       </HIDDEN MENU>                  */
 }
-@media (max-width: 650px) {
-  .main-container {
-    padding-bottom: 18rem;
-  }
+@media (max-width: 720px) {
   .title-container {
     text-align: center;
+    padding: 0;
   }
   .middle-content-buttons-container {
     justify-content: center;
@@ -740,38 +839,69 @@ svg {
     justify-content: center;
     align-items: center;
   }
+  .main-middle-img {
+    width: 22rem;
+  }
+  .oculus-img {
+    width: 8rem;
+    height: 6rem;
+  }
   .center-img {
     justify-content: center;
     margin: 2rem 0;
+    height: 22rem;
+  }
+  .play-beyond-img {
+    max-width: 12rem;
+  }
+}
+@media (max-width: 550px) {
+  .main-container {
+    padding-bottom: 84rem;
+  }
+  .middle-content {
+    margin-top: 7rem;
+  }
+  .title-container p {
+    line-height: 1.3;
+  }
+  .center-img {
+    margin-top: 3rem;
+  }
+  .main-middle-img {
+    border-radius: 50% 50% 0 30%;
   }
   .side-middle-img {
-    bottom: -2rem;
-    left: 6rem;
+    bottom: -3rem;
+    left: 0rem;
   }
-  .metaverse-products {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
-  .metaverse-product-main {
-    width: 100%;
-    align-items: center;
-  }
-  .curved-text {
-    max-width: 10rem;
-    margin-top: -13rem;
-  }
-  .metaman {
-    max-height: 14rem;
+  .play-beyond-img {
     max-width: 10rem;
   }
   .metaverse-single-products-container {
-    width: 100%;
-    justify-content: center;
-    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr;
+  }
+  .oculus-background {
+    width: max-content;
   }
   .metaverse-single-product {
-    margin: 0;
-    margin-right: 0.5rem;
+    align-items: center !important;
+    margin-right: 0;
+  }
+  .metaverse-single-product-inner {
+    padding-bottom: 2rem;
+  }
+  .oculus-img {
+    width: 10rem;
+    height: 8rem;
+  }
+  .metaverse-single-product h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 380px) {
+  .main-middle-img {
+    max-width: 18rem;
   }
 }

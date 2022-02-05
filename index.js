@@ -4,6 +4,7 @@ let topHambLine = document.querySelector(".top-line");
 let middleHambLine = document.querySelector(".middle-line");
 let bottomHambLine = document.querySelector(".bottom-line");
 hiddenMenu.style.display === "none";
+let sideImg = document.querySelector(".side-middle-img");
 
 let navStatus = false;
 
@@ -27,5 +28,8 @@ function showMenu() {
     showAndHideMenu();
   }
 }
-
+function rotateImg() {
+  sideImg.classList.toggle("side-middle-img-rotation");
+}
 hamburger.addEventListener("click", showMenu);
+sideImg.addEventListener("click", rotateImg);

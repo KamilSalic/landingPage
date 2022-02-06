@@ -10,6 +10,7 @@ let navStatus = false;
 
 function showAndHideMenu() {
   hiddenMenu.classList.toggle("side-menu");
+  hamburger.classList.toggle("hidden-menu-open");
 }
 function showMenu() {
   if (navStatus === false) {

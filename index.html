@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="main-container">
+    <div class="outer-container">
+      <!-- <vertical animated lines> -->
       <div class="svg-container">
         <div class="curved-line">
           <svg
@@ -23,17 +24,6 @@
         </div>
         <div class="curved-line">
           <svg
-            class="second-curved-animated-line"
-            fill="transparent"
-            stroke="white"
-            height="948"
-            width="200"
-          >
-            <path d="M 9.57 0 C 50.06 430.79, 150.51 200.15, 90.8 948" />
-          </svg>
-        </div>
-        <div class="curved-line">
-          <svg
             class="third-curved-animated-line"
             height="948"
             width="200"
@@ -41,17 +31,6 @@
             stroke="white"
           >
             <path d="M 9.57 0 C 60.06 400.79, 170.51 200.15, 110 948" />
-          </svg>
-        </div>
-        <div class="curved-line">
-          <svg
-            class="fourth-curved-animated-line"
-            height="948"
-            width="200"
-            fill="transparent"
-            stroke="white"
-          >
-            <path d="M 9.57 0 C 70.06 420.79, 180.51 200.15, 130 948" />
           </svg>
         </div>
         <div class="curved-line">
@@ -76,27 +55,20 @@
             <path d="M 40.57 0 C 80.06 360.79, 200.51 60.15, 148 948" />
           </svg>
         </div>
-        <div class="curved-line">
-          <svg
-            class="sixth-curved-animated-line"
-            height="948"
-            width="200"
-            fill="transparent"
-            stroke="white"
-          >
-            <path d="M 40.57 0 C 80.06 360.79, 200.51 60.15, 148 948" />
-          </svg>
-        </div>
       </div>
+      <!-- </ vertical animated lines> -->
+      <!-- <main div- start of the content> -->
       <div class="main-content">
-        <!-- nav -->
+        <!-- <navigation bar> -->
         <nav class="nav-bar">
-          <ul class="nav-items-logo">
-            <li class="logo">
-              <img src="/images/logo.jpg" alt="" />
-            </li>
-            <li class="animation-change-color">virtualyou</li>
-          </ul>
+          <header>
+            <ul class="nav-items-logo">
+              <li class="logo">
+                <img src="/images/logo.jpg" alt="" />
+              </li>
+              <li class="animation-change-color">virtualyou</li>
+            </ul>
+          </header>
           <div class="outer-hamburger-bar">
             <div class="hamburger-bar">
               <span class="top-line"></span>
@@ -107,7 +79,7 @@
           <div class="hidden-menu">
             <nav class="nav-items">
               <ul>
-                <li class="hidden-link"><a href="/">Products</a></li>
+                <li class="hidden-link"><a href="#products">Products</a></li>
                 <li class="hidden-link">
                   <a class="about-link" href="/">About</a>
                 </li>
@@ -130,8 +102,10 @@
             <li><a href="" class="hover-animation-underline">FAQ</a></li>
           </ul>
         </nav>
-        <!-- /nav -->
+        <!-- </navigation bar> -->
+        <!-- <middle-content> -->
         <div class="middle-content">
+          <!-- <title container> -->
           <div class="title-container">
             <h1>
               Let yourself<br />
@@ -150,6 +124,8 @@
               </div>
             </div>
           </div>
+          <!-- </title container> -->
+          <!-- <center img> -->
           <div class="center-img">
             <div class="main-middle-img-container">
               <img src="/images/ocu-man.jpg" alt="" class="main-middle-img" />
@@ -162,10 +138,14 @@
               </div>
             </div>
           </div>
+          <!-- </center img> -->
         </div>
-        <div class="metaverse-products-container">
+        <!-- </middle-content> -->
+        <!-- <metaverse-products-main-container> -->
+        <div class="metaverse-products-main-container">
           <div class="metaverse-products">
-            <div class="metaverse-product-main">
+            <!-- <metaverse-first-large-img> -->
+            <div class="metaverse-first-large-img">
               <svg
                 width="224"
                 height="102"
@@ -217,7 +197,10 @@
               </svg>
               <img src="/images/metaman.png" alt="" class="metaman" />
             </div>
-            <div class="metaverse-single-products-container">
+            <!-- </metaverse-first-large-img> -->
+            <!-- <metaverse-single-products-container> -->
+            <div class="metaverse-single-products-container" id="products">
+              <!-- <metaverse-single-product first> -->
               <div class="metaverse-single-product">
                 <div class="metaverse-single-product-inner">
                   <div class="oculus-quest-background oculus-background">
@@ -233,6 +216,8 @@
                   </div>
                 </div>
               </div>
+              <!-- </ metaverse-single-product> -->
+              <!-- <metaverse-single-product second> -->
               <div class="metaverse-single-product">
                 <div class="metaverse-single-product-inner">
                   <div class="oculus-rift-background oculus-background">
@@ -248,6 +233,8 @@
                   </div>
                 </div>
               </div>
+              <!-- </metaverse-single-product second> -->
+              <!-- <metaverse-single-product third> -->
               <div class="metaverse-single-product">
                 <div class="metaverse-single-product-inner">
                   <div class="oculus-go-background oculus-background">
@@ -263,14 +250,16 @@
                   </div>
                 </div>
               </div>
+              <!-- </metaverse-single-product third> -->
             </div>
+            <!-- </metaverse-single-products-container> -->
           </div>
         </div>
-        <div class="footer">
+        <!-- </metaverse-products-main-container> -->
+        <!-- <footer> -->
+        <footer class="footer">
           <div class="footer-phone-number">
-            <a href="tel: 000000001" class="phone-nr"
-              >Call to order: 000000001</a
-            >
+            <a href="tel: 000000001" class="phone-nr">Call to make an order</a>
           </div>
           <ul class="footer-inner">
             <li><a href="#" class="footer-link">Contact</a></li>
@@ -279,8 +268,10 @@
             <li><a href="#" class="footer-link">FAQ</a></li>
           </ul>
           <div class="copyrights">Copyright © 2022 KamilSalic.</div>
-        </div>
+        </footer>
+        <!-- </footer> -->
       </div>
+      <!-- <main div- end of the content> -->
     </div>
     <script src="index.js"></script>
   </body>
